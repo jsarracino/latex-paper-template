@@ -1,0 +1,62 @@
+\newcommand{\pFail}{\emptyset}
+\newcommand{\pAny}{\texttt{.}}
+\newcommand{\pOr}{\vee}
+\newcommand{\pPure}{\texttt{pure}}
+\newcommand{\pBind}{>\!\!>\!\!=}
+%\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\code}[1]{\lstinline[mathescape,columns=fixed,basicstyle=\ttfamily]{#1}}
+\newcommand{\smallcode}[1]{\lstinline[mathescape,columns=fixed,basicstyle=\footnotesize\ttfamily]{#1}}
+\newcommand{\parseto}{\rightarrowtail}
+\newcommand{\cons}{::}
+\newcommand{\nil}{[]}
+\newcommand{\eps}{\epsilon}
+\newcommand{\append}{+\!\!\!\!+}
+
+\newcommand{\parses}[3]{(#1 , #2) \parseto #3}
+\newcommand{\interpEps}[1]{\left\Vert #1 \right\Vert_{\eps}}
+\newcommand{\derivative}[2]{\text{D}_{#1} ~ #2}
+
+\newcommand{\concatMap}{\code{concat\_map}}
+\newcommand{\cat}[2]{#1 ~ \$ ~ #2}
+\newcommand{\map}[2]{#1 ~ @ ~ #2}
+
+\newcommand{\dollar}{\mbox{\textdollar}}
+
+\newcommand{\SYSTEM}{SYSTEM\xspace}
+\newcommand{\tool}{\SYSTEM}
+\newcommand{\FLOC}{$\text{FOL}_\text{C}$\xspace}
+
+\newcommand{\syndef}[3]{#1&::=&#2&\text{#3} \\}
+\newcommand{\syncase}[2]{&|&#1&\text{#2} \\}
+
+\newcommand{\fmTrue}{\texttt{tt}}
+\newcommand{\fmFalse}{\texttt{ff}}
+\newcommand{\fmImpl}[2]{#1 \longrightarrow #2}
+\newcommand{\fmAnd}[2]{#1 \land #2}
+\newcommand{\fmOr}[2]{#1 \vee #2}
+\newcommand{\fmNeg}[1]{\neg #1}
+\newcommand{\fmForall}[2]{\forall ~ #1, ~ #2}
+\newcommand{\fmEqual}[2]{#1 ~ == ~ #2}
+
+\newcommand{\semb}[1]{\mathrel{\left\llbracket#1\right\rrbracket}}
+\newcommand{\semp}[1]{\mathrel{\llparenthesis ~ #1 ~ \rrparenthesis}}
+\newcommand{\semFm}[2]{\semb{#1}_{#2}}
+\newcommand{\semTm}[2]{\semp{#1}_{#2}}
+
+\newcommand{\mathenvcode}[1]{\text{\code{#1}}}
+\newcommand{\semTmcase}[3]{\semTm{#1}{#2} & \triangleq & #3 \\}
+\newcommand{\semFmcase}[3]{\semFm{#1}{#2} & \triangleq & #3 \\}
+
+
+\newcommand{\kindly}[1]{\Gamma \vdash #1 ~ \mathsf{kindly}}
+\newcommand{\kindlyext}[2]{#1 \vdash #2 ~ \mathsf{kindly}}
+% \Gamma \vdash t : \star ~ \text{kindly} \qquad
+% \newcommand{\kindly}[2]{\Gamma \vdash #1 : #2 ~ \text{kindly}}
+\newcommand{\simply}[1]{\Gamma \vdash #1 ~ \mathsf{simple}}
+\newcommand{\simplyext}[2]{\Gamma #1 \vdash #2 ~ \mathsf{simple}}
+%   \Gamma \vdash t ~ \text{simply} \qquad
+\newcommand{\cmdKindly}[1]{\Gamma \vdash #1 }
+\newcommand{\cmdKindlyext}[2]{#1 \vdash #2 }
+%   \Gamma \vdash cmd
+
+\newcommand{\infr}{\infer}
